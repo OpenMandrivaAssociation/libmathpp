@@ -1,5 +1,5 @@
 %define	version	0.0.3
-%define release	2mdk
+%define release	 %mkrel 2
 
 %define major	0
 %define libname %mklibname math++ %{major}
