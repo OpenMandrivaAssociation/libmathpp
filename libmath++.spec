@@ -13,7 +13,6 @@ Group:		System/Libraries
 URL:		http://www.surakware.net/projects/%{name}/index.xml
 Source:		%{name}-%{version}.tar.bz2
 Patch0:		%{name}-0.0.3-gcc34.patch.bz2
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	doxygen
 
 %description
