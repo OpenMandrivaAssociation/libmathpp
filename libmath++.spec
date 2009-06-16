@@ -1,5 +1,5 @@
-%define	version	0.0.3
-%define release	 %mkrel 4
+%define	version	0.0.4
+%define release	%mkrel 1
 
 %define major	0
 %define libname %mklibname math++ %{major}
@@ -8,11 +8,13 @@ Summary:	C++ Math Type Library
 Name:		libmath++
 Version:	%{version}
 Release:	%{release}
-License:	GPL
+License:	LGPLv2+
 Group:		System/Libraries
-URL:		http://www.surakware.net/projects/%{name}/index.xml
+# 16 Jun 2009 / incubusss
+# upstream source no more available, suing the 0.0.4 tarball downloaded
+# from Debian repository renamed to %{name}-%{version} and bz2 compressed
+# http://ftp.de.debian.org/debian/pool/main/libm/libmath++/libmath++_0.0.4.orig.tar.gz
 Source:		%{name}-%{version}.tar.bz2
-Patch0:		%{name}-0.0.3-gcc34.patch.bz2
 Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	doxygen
 
@@ -46,9 +48,9 @@ any applications/libraries that needs %{name}.
 
 %prep
 %setup -q
-%patch0 -p1 -b .gcc34
 
 %build
+autoreconf -f -i
 %configure2_5x
 %make
 make api-doc
