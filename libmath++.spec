@@ -4,7 +4,7 @@
 Summary:	C++ Math Type Library
 Name:		libmath++
 Version:	0.0.4
-Release:	3
+Release:	4
 License:	LGPLv2+
 Group:		System/Libraries
 # 16 Jun 2009 / incubusss
