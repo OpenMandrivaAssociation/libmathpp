@@ -12,6 +12,11 @@ Group:		System/Libraries
 # from Debian repository renamed to %{name}-%{version} and bz2 compressed
 # http://ftp.de.debian.org/debian/pool/main/libm/libmath++/libmath++_0.0.4.orig.tar.gz
 Source0:	%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 
 %description
